@@ -1,3 +1,5 @@
+# pylint: disable=missing-docstring
+
 import unittest
 from morse import Morse
 
@@ -86,4 +88,5 @@ class TestMorse(unittest.TestCase):
     def test_sos(self):
         self.assertEqual(Morse().decode("... --- ..."), "SOS")
 
-    # NOTE: we will add a test for *sentences* later
+    def decode_hey_jude(self):
+        self.assertEqual(Morse().decode('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
